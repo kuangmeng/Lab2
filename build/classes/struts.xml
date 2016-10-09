@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+	"http://struts.apache.org/dtds/struts-2.3.dtd">
+<struts>
+    <constant name="struts.enable.DynamicMethodInvocation" value="true" />
+    <constant name="struts.devModel" value="true"/>
+    <constant name="struts.i18n.encoding" value="UTF-8" />
+    <package name="net.kuangmeng" namespace = "/" extends="struts-default">
+        <action name="login" class="net.kuangmeng.LoginAction" method="execute">
+            <result name="success">/Welcome.jsp</result>
+            <result name="error">/Error.jsp</result>
+            <result name="back">/index.jsp</result>
+        </action>
+        <action name="searchAction" 
+			class="net.kuangmeng.SearchAction" >
+		    <result name="book">/resultbook.jsp</result>
+		    <result name="error">/Error.jsp</result>
+		    <result name="author">/author.jsp</result>
+		 	<result name="publisher">/publisher.jsp</result>
+		</action>
+		 <action name="addAction" 
+			class="net.kuangmeng.AddAction" >
+		    <result name="success">/top.jsp</result>
+		    <result name="needAdd">/AddAuthor.jsp</result>
+		    <result name="error">/Error.jsp</result>
+		    <result name="back">/addmsg.jsp</result>
+		    <result name="dateback">/datemsg.jsp</result>
+		    
+		</action>
+		 <action name="addAuthorAction" 
+			class="net.kuangmeng.AddAction" method="addAuthor">
+		    <result name="success">/top.jsp</result>
+		    <result name="error">/Error.jsp</result>
+		</action>
+		 <action name="deleteBook" 
+			class="net.kuangmeng.DeleteBook">
+		    <result name="success">/top.jsp</result>
+		    <result name="error">/Error.jsp</result>
+		    <result name="back">/deletemsg.jsp</result>   
+		</action>
+		<action name="addCollect" 
+			class="net.kuangmeng.AddCollect">
+		    <result name="success">/top.jsp</result>
+		    <result name="error">/Error.jsp</result>
+		    <result name="back">/collectmsg.jsp</result>
+		    
+		</action>
+		<action name="loginAction" 
+			class="net.kuangmeng.Login" method="login">
+		    <result name="success">/index.jsp</result>
+		    <result name="error">/Error.jsp</result>
+		    <result name="back">/msg.jsp</result>
+		    <result name="qqback">/qqmsg.jsp</result>
+		    
+		</action>
+		<action name="updateAction" 
+			class="net.kuangmeng.Update">
+		    <result name="success">/updatebook.jsp</result>
+		    <result name="error">/Error.jsp</result>
+		    <result name="back">/updatemsg.jsp</result> 
+		</action>
+		<action name="updatebookAction" 
+			class="net.kuangmeng.UpdateAction">
+		    <result name="success">/top.jsp</result>
+		    <result name="error">/Error.jsp</result>
+		    <result name="needAdd">/AddAuthor.jsp</result> 
+		</action>
+		<action name="upload" 
+			class="net.kuangmeng.UploadAction">
+		    <result name="success">/uploadmsg.jsp</result>
+		    <result name="error">/uploadmsg2.jsp</result>
+		</action>
+		<action name="addcomment" 
+			class="net.kuangmeng.Comment">
+		    <result name="success">/success.jsp</result>
+		    <result name="error">/Error.jsp</result>
+		    <result name="back">/commentmsg.jsp</result>
+		</action>
+    </package> 
+</struts>
