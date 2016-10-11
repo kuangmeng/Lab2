@@ -344,7 +344,7 @@ body {
 				<%
 				}
 				String num2=rs.getString("ISBN");
-					out.print(num);
+					out.print(num2);
 				%>
 			</td>
 			<td><a href="/book.jsp?books=<%=num2 %>">
