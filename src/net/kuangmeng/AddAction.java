@@ -227,8 +227,4 @@ public boolean isdate(String strdate) {
     }
     return true;
 }
-//测试
-public void SayHello(){
-	System.out.println("你好，这是为了测试git");
-}
 }
